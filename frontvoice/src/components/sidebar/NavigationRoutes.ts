@@ -15,93 +15,70 @@ export default {
       name: 'dashboard',
       displayName: 'menu.dashboard',
       meta: {
-        icon: 'vuestic-iconset-dashboard',
-      },
-    },
-    {
-      name: 'users',
-      displayName: 'menu.users',
-      meta: {
-        icon: 'group',
+        icon: 'dashboard',
       },
     },
     {
       name: 'projects',
       displayName: 'menu.projects',
       meta: {
-        icon: 'folder_shared',
-      },
-    },
-    {
-      name: 'payments',
-      displayName: 'menu.payments',
-      meta: {
-        icon: 'credit_card',
+        icon: 'article',
       },
       children: [
         {
-          name: 'payment-methods',
-          displayName: 'menu.payment-methods',
+          name: 'my-projects',
+          displayName: 'menu.my-projects',
         },
         {
-          name: 'pricing-plans',
-          displayName: 'menu.pricing-plans',
-        },
-        {
-          name: 'billing',
-          displayName: 'menu.billing',
+          name: 'all-projects',
+          displayName: 'menu.all-projects',
         },
       ],
     },
     {
-      name: 'auth',
-      displayName: 'menu.auth',
+      name: 'imagined-speech',
+      displayName: 'menu.imagined-speech',
       meta: {
-        icon: 'login',
+        icon: 'mic',
       },
       children: [
         {
-          name: 'login',
-          displayName: 'menu.login',
+          name: 'my-imagined-speechs',
+          displayName: 'menu.my-imagined-speechs',
         },
         {
-          name: 'signup',
-          displayName: 'menu.signup',
-        },
-        {
-          name: 'recover-password',
-          displayName: 'menu.recover-password',
+          name: 'all-imagined-speechs',
+          displayName: 'menu.all-imagined-speechs',
         },
       ],
     },
-
+    {
+      name: 'organization',
+      displayName: 'menu.organization',
+      meta: {
+        icon: 'group',
+      },
+      children: [
+        {
+          name: 'my-organizations',
+          displayName: 'menu.my-organizations',
+        },
+        {
+          name: 'all-organizations',
+          displayName: 'menu.all-organizations',
+        },
+        {
+          name: 'organization-solicitation',
+          displayName: 'menu.organization-solicitation',
+        },
+      ],
+    },
     {
       name: 'faq',
       displayName: 'menu.faq',
       meta: {
         icon: 'quiz',
       },
-    },
-    {
-      name: '404',
-      displayName: 'menu.404',
-      meta: {
-        icon: 'vuestic-iconset-files',
-      },
-    },
-    {
-      name: 'preferences',
-      displayName: 'menu.preferences',
-      meta: {
-        icon: 'manage_accounts',
-      },
-    },
-    {
-      name: 'settings',
-      displayName: 'menu.settings',
-      meta: {
-        icon: 'settings',
-      },
-    },
+    },    
   ] as INavigationRoute[],
 }

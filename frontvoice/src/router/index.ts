@@ -22,6 +22,68 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('../pages/admin/dashboard/Dashboard.vue'),
       },
       {
+        name: 'projects',
+        path: '/projects',
+        component: RouteViewComponent,
+        children: [
+          {
+            name: 'my-projects',
+            path: 'my-projects',
+            component: () => import('../pages/payments/PaymentsPage.vue'),
+          },
+          {
+            name: 'all-projects',
+            path: 'all-projects',
+            component: () => import('../pages/billing/BillingPage.vue'),
+          },
+        ],
+      },
+      {
+        name: 'imagined-speech',
+        path: '/imaginedspeech',
+        component: RouteViewComponent,
+        children: [
+          {
+            name: 'my-imagined-speechs',
+            path: 'my-imagined-speechs',
+            component: () => import('../pages/payments/PaymentsPage.vue'),
+          },
+          {
+            name: 'all-imagined-speechs',
+            path: 'all-imagined-speechs',
+            component: () => import('../pages/billing/BillingPage.vue'),
+          },
+        ],
+      },
+      {
+        name: 'organization',
+        path: '/organization',
+        component: RouteViewComponent,
+        children: [
+          {
+            name: 'my-organizations',
+            path: 'my-organizations',
+            component: () => import('../pages/payments/PaymentsPage.vue'),
+          },
+          {
+            name: 'all-organizations',
+            path: 'all-organizations',
+            component: () => import('../pages/billing/BillingPage.vue'),
+          },
+          {
+            name: 'organization-solicitation',
+            path: 'organization-solicitation',
+            component: () => import('../pages/billing/BillingPage.vue'),
+          },
+        ],
+      },
+      {
+        name: 'faq',
+        path: '/faq',
+        component: () => import('../pages/faq/FaqPage.vue'),
+      },
+      // Daqui pra baixo é o que vair
+      {
         name: 'settings',
         path: 'settings',
         component: () => import('../pages/settings/Settings.vue'),
@@ -35,38 +97,6 @@ const routes: Array<RouteRecordRaw> = [
         name: 'users',
         path: 'users',
         component: () => import('../pages/users/UsersPage.vue'),
-      },
-      {
-        name: 'projects',
-        path: 'projects',
-        component: () => import('../pages/projects/ProjectsPage.vue'),
-      },
-      {
-        name: 'payments',
-        path: '/payments',
-        component: RouteViewComponent,
-        children: [
-          {
-            name: 'payment-methods',
-            path: 'payment-methods',
-            component: () => import('../pages/payments/PaymentsPage.vue'),
-          },
-          {
-            name: 'billing',
-            path: 'billing',
-            component: () => import('../pages/billing/BillingPage.vue'),
-          },
-          {
-            name: 'pricing-plans',
-            path: 'pricing-plans',
-            component: () => import('../pages/pricing-plans/PricingPlans.vue'),
-          },
-        ],
-      },
-      {
-        name: 'faq',
-        path: '/faq',
-        component: () => import('../pages/faq/FaqPage.vue'),
       },
     ],
   },
@@ -113,7 +143,6 @@ const router = createRouter({
     if (savedPosition) {
       return savedPosition
     }
-    // For some reason using documentation example doesn't scroll on page navigation.
     if (to.hash) {
       return { el: to.hash, behavior: 'smooth' }
     } else {

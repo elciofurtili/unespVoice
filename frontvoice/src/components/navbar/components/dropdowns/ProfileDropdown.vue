@@ -76,16 +76,6 @@ withDefaults(
             to: 'settings',
             icon: 'mso-settings',
           },
-          {
-            name: 'billing',
-            to: 'billing',
-            icon: 'mso-receipt_long',
-          },
-          {
-            name: 'projects',
-            to: 'projects',
-            icon: 'mso-favorite',
-          },
         ],
       },
       {
@@ -99,7 +89,7 @@ withDefaults(
           },
           {
             name: 'helpAndSupport',
-            href: 'https://discord.gg/u7fQdqQt8c',
+            href: 'https://github.com/elciofurtili/unespVoice',
             icon: 'mso-error',
           },
         ],
